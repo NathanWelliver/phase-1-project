@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Mad Track</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <div id="app-header">
+
+        </div>
+
+        <div class="container">
+            <form class="add-friend-form">
+                <h3>Add Friend</h3>
+
+                <input
+                type="text"
+                name="name"
+                value=""
+                phonenumber="phonenumber"
+                placeholder="Enter friend's name..."
+                class="input-text"
+                />
+                <br />
+                <input
+                type="text"
+                name="image"
+                value=""
+                placeholder="Enter a friends image URL"
+                class="input-text"
+                />
+                <input
+                type="submit"
+                name="submit"
+                value="Create Contact"
+                class="submit"
+                />
+            </form>
+        </div>
+        <p style="text-align:center">
+        Add Friends or Family for future contact. <button id="add-friends-or-family">Add Friends or Family.</button>
+        </p>
+
+        <div id="friends-and-family"></div>
+        <script type="text/javascript" src="src/index.js"></script>
+    </body>
+</html>
