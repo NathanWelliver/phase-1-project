@@ -12,6 +12,7 @@
           alt="contact-header"
           />
         </div>
+        
 
         <div class="container">
             <form class="add-friend-form">
@@ -32,6 +33,14 @@
                 placeholder="Enter a friends image URL"
                 class="input-text"
                 />
+                <br />
+                <input
+                type="text"
+                name="phone-number"
+                value=""
+                placeholder="Enter friends phone-number"
+                class="input-text"
+                />
                 <input
                 type="submit"
                 name="submit"
@@ -40,9 +49,18 @@
                 />
             </form>
         </div>
+
+         
+
+
         <p style="text-align:center">
-        Add Friends or Family for future contact. <button id="add-friends-or-family">Add Friends or Family.</button>
+        Add Friends or Family for future check-ins. <button id="add-friends-or-family">Add Friends or Family.</button>
         </p>
+
+        <p style="text-align:right">
+            <button id="toggle-mode-button">Toggle Mode</button>
+        </p>
+
 
         <div id="contact-collection"></div>
         <script type="text/javascript" src="src/index.js"></script>
