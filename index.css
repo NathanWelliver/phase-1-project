@@ -6,8 +6,8 @@ body {
   #app-header {
     display: flex;
     justify-content: center;
-    background: #515DA2;
-    opacity: .8;
+    background: #d59dec;
+    opacity: 1;
     height: 7rem;
     padding: 1rem;
   }
@@ -21,39 +21,40 @@ body {
     margin: 2rem;
   }
   
-  .card {
+  .contact-card {
     text-align: center;
-    border: grey solid 1px;
+    background-color: #d59dec;
+    border: #2e01ac solid 3px;
     padding: 1rem;
     width: 15rem;
     height: 25rem;
     display: inline-grid;
-    margin: 1rem 2rem;
-    box-shadow: 3px 4px #e04b52
+    margin: 10px;
+    
   }
   
   .contact-picture {
     justify-self: center;
-    height: 12rem;
+    height: 16rem;
     width: auto;
   }
   
   button {
     position: relative;
-    background-color: #e04b52;
+    background-color: #2e01ac;
     border: none;
     border-radius: 5px;
-    height: 3rem;
+    height: 2rem;
     width: max-content;
-    color: whitesmoke;
-    font-size: 18px;
+    color: #00c0c0;
+    font-size: 14px;
     justify-self: center;
   }
   
   button:hover {
     background-color: whitesmoke;
-    border: #e04b52 solid 1px;
-    color: #e04b52;
+    border: #2e01ac solid 1px;
+    color: #2e01ac;
   }
   
   .container {
@@ -61,8 +62,8 @@ body {
     width: stretch;
     height: auto;
     display: none;
-    background: #515DA2;
-    opacity: .8;
+    background: #d59dec;
+    opacity: 1;
   }
   
   .add-friend-form {
@@ -71,11 +72,11 @@ body {
   
   .submit {
     position: relative;
-    background-color: #e04b52;
+    background-color: #2e01ac;
     border-radius: 5px;
     height: 2rem;
     width: max-content;
-    color: whitesmoke;
+    color: #00c0c0;
     font-size: 18px;
     justify-self: center;
     font-family: monospace;
@@ -84,8 +85,8 @@ body {
   
   .submit:hover {
     background-color: whitesmoke;
-    border: #e04b52 solid 1px;
-    color: #e04b52;
+    border: #2e01ac solid 1px;
+    color: #2e01ac;
   }
   
   
@@ -98,3 +99,16 @@ body {
     margin: 3px;
   }
   
+  .toggle-mode-button {
+    position: relative;
+  }
+  
+  body.light-mode {
+    background-color: white;
+    color: black;
+  }
+
+  body.dark-mode {
+    background-color: #110d0b;
+    color: white;
+  }
