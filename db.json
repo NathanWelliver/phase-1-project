@@ -3,7 +3,33 @@
     {
       "id": 1,
       "name": "Dr.Doom",
-      "image": "https://www.pngmart.com/files/22/Doctor-Doom-PNG-Isolated-Pic.png"
+      "image": "https://www.pngmart.com/files/22/Doctor-Doom-PNG-Isolated-Pic.png",
+      "phone-number": "123-456-7891"
+    },
+    {
+      "name": "Joe",
+      "image": "https://www.pngmart.com/files/3/Family-Guy-PNG-Picture.png",
+      "phone-number": "800-588-2300",
+      "id": 2
+    },
+    {
+      "name": "John",
+      "image": "https://www.pngmart.com/files/11/Salt-Bae-Chef-PNG-Clipart.png",
+      "phone-number": "654-987-1234",
+      "id": 3
+    },
+    {
+      "name": "Leo",
+      "image": "https://www.pngmart.com/files/2/Leonardo-DiCaprio-PNG-Clipart.png",
+      "phone-number": "978-465-3124",
+      "id": 4
+    },
+    {
+      "name": "Bruce",
+      "image": "https://www.pngmart.com/files/2/Bruce-Lee-PNG-Transparent.png",
+      "phone-number": "314-576-1436",
+      "id": 5
     }
+    
   ]
 }
