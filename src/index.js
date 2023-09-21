@@ -17,17 +17,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    //function to fetch and disply contacts
-    function fetchContactsAndDisplay(){
-        fetch("http://localhost:3000/contacts")
-        .then(response => response.json())
-        .then(contacts => {
-            contacts.forEach(contact => {
-                const card = createContactCard(contact);
-                contactCollection.appendChild(card);
-            });
+    // Function to fetch and display contacts
+function fetchContactsAndDisplay() {
+    fetch("http://localhost:3000/contacts")
+      .then(response => response.json())
+      .then(contacts => {
+        contacts.forEach(contact => {
+          displayContact(contact);
         });
-    }
+      });
+  }
+  
+  // Function to display a contact card
+  function displayContact(contact) {
+    const card = createContactCard(contact);
+    contactCollection.appendChild(card);
+  }
     
 
     // Function to create a contact card with an alert button
@@ -42,8 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
         img.src = contact.image;
         img.className = "contact-picture";
 
-        const p = document.createElement("p");
-        p.textContent = "Send alert";
+        const pPhoneNumber = document.createElement("p");
+        pPhoneNumber.textContent = `Phone Number: ${contact['phone-number']}`
 
         const alertButton = document.createElement("button");
         alertButton.className = "alert-button";
@@ -51,12 +56,12 @@ document.addEventListener("DOMContentLoaded", () => {
         
 
         alertButton.addEventListener("click", () => {
-            alert(`This is an alert for ${contact.name}`);
+            alert(`Alert was sent to ${contact.name}`);
         });
 
         card.appendChild(h2);
         card.appendChild(img);
-        card.appendChild(p);
+        card.appendChild(pPhoneNumber);
         card.appendChild(alertButton);
 
         return card;
@@ -70,8 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const newContact = {
             name: name,
-            image: image
-            
+            image: image,
+            'phone-number': event.target['phone-number'].value
         };
 
         fetch("http://localhost:3000/contacts", {
@@ -89,4 +94,20 @@ document.addEventListener("DOMContentLoaded", () => {
             contactForm.reset();
         });
     });
+
+    const toggleLightDarkButton = document.querySelector("#toggle-mode-button");
+    const body = document.body;
+
+    toggleLightDarkButton.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+
+        const currentMode = body.classList.contains("darkmode") ? "dark" : "light";
+        localStorage.setItem("mode", currentMode);
+
+        const savedMode = localStorage.getItem("mode");
+        if (savedMode === "dark") {
+            body.classList.add("dark-mode");
+        }
+    })
+
 });
